@@ -18,7 +18,7 @@ scalables, en passant par le streaming temps réel et l'infrastructure data.
 | P10 | BottleNeck — ETL automatisé | Orchestration ETL | Kestra, DuckDB, Python | [GitHub](https://github.com/MoyLiG/p10-bottleneck-data-engineer) |
 | P9 | InduTechData — pipeline temps réel | Streaming | Redpanda/Kafka, PySpark, MySQL, Docker | [GitHub](https://github.com/MoyLiG/P9-InduTechData) |
 | P8 | Infrastructure de données (Forecast 2.0) | Data infra / ELT | Airbyte, dbt, PostgreSQL, AWS | [GitHub](https://github.com/MoyLiG/P8-forecast-data-infra) |
-| P7 | Base de données NoSQL (NosCités) | NoSQL | MongoDB (replica set + sharding), Tableau | _repo à venir_ |
+| P7 | Base de données NoSQL (NosCités) | NoSQL | MongoDB (replica set + sharding), Tableau | [GitHub](https://github.com/MoyLiG/P7-noscites-mongodb) |
 | P6 | Prédiction conso. bâtiments (Seattle) | ML deployment | BentoML, scikit-learn, Pydantic, Docker | _repo à venir_ |
 | P5 | Migration données médicales | NoSQL / DevOps | MongoDB, Docker, RBAC, CI/CD GitHub Actions | [GitHub](https://github.com/MoyLiG/OC_P5) |
 | P4 | Audit d'un environnement de données | SQL / BI | SQL, Power BI, audit | _projet local_ |
@@ -251,7 +251,7 @@ visualisation Tableau.
 **Valeur ajoutée** — Une base prête à la montée en charge multi-villes sans
 migration de schéma, avec un raisonnement d'architecture défendable.
 
-**Code** — _repo à venir_
+**Code** — [github.com/MoyLiG/P7-noscites-mongodb](https://github.com/MoyLiG/P7-noscites-mongodb)
 
 ### P6 — Anticipez les besoins en consommation des bâtiments (Seattle)
 > Déployer un modèle de prédiction de consommation énergétique des bâtiments
