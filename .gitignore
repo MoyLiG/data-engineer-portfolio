@@ -1,0 +1,12 @@
+# Aucune trace d'outillage Claude Code ni de build de livrables
+CLAUDE.md
+.claude/
+graphify-out/
+.graphify_batch/
+tasks/
+docs/superpowers/
+MEMORY.md
+lessons*.md
+*.zip
+.venv/
+__pycache__/
