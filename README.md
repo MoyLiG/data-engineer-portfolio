@@ -19,7 +19,7 @@ scalables, en passant par le streaming temps réel et l'infrastructure data.
 | P9 | InduTechData — pipeline temps réel | Streaming | Redpanda/Kafka, PySpark, MySQL, Docker | [GitHub](https://github.com/MoyLiG/P9-InduTechData) |
 | P8 | Infrastructure de données (Forecast 2.0) | Data infra / ELT | Airbyte, dbt, PostgreSQL, AWS | [GitHub](https://github.com/MoyLiG/P8-forecast-data-infra) |
 | P7 | Base de données NoSQL (NosCités) | NoSQL | MongoDB (replica set + sharding), Tableau | [GitHub](https://github.com/MoyLiG/P7-noscites-mongodb) |
-| P6 | Prédiction conso. bâtiments (Seattle) | ML deployment | BentoML, scikit-learn, Pydantic, Docker | _repo à venir_ |
+| P6 | Prédiction conso. bâtiments (Seattle) | ML deployment | BentoML, scikit-learn, Pydantic, Docker | [GitHub](https://github.com/MoyLiG/P6-seattle-energy-bentoml) |
 | P5 | Migration données médicales | NoSQL / DevOps | MongoDB, Docker, RBAC, CI/CD GitHub Actions | [GitHub](https://github.com/MoyLiG/OC_P5) |
 | P4 | Audit d'un environnement de données | SQL / BI | SQL, Power BI, audit | _projet local_ |
 | P3 | Conception & requêtage SQL | SQL / Modélisation | SQL, modélisation relationnelle (Power Architect) | _projet local_ |
@@ -279,7 +279,7 @@ d'API, validation de schémas, feature engineering, conteneurisation.
 **Valeur ajoutée** — Fait passer un modèle du notebook à un service interrogeable
 et validé, étape indispensable de la mise en production ML.
 
-**Code** — _repo à venir_
+**Code** — [github.com/MoyLiG/P6-seattle-energy-bentoml](https://github.com/MoyLiG/P6-seattle-energy-bentoml)
 
 ### P5 — Migration de données médicales vers MongoDB
 > Migrer 55 500 dossiers médicaux d'un CSV vers MongoDB, de façon sécurisée et
