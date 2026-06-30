@@ -12,7 +12,7 @@ scalables, en passant par le streaming temps réel et l'infrastructure data.
 
 | # | Projet | Domaine | Stack clé | Code |
 |---|--------|---------|-----------|------|
-| P13 | MVP RAG scalable | NLP / RAG / Cloud | pgvector, PostGIS, Redis, smolagents, Langfuse, FastAPI, Scaleway | _repo à venir_ |
+| P13 | MVP RAG scalable | NLP / RAG / Cloud | pgvector, PostGIS, Redis, smolagents, Langfuse, FastAPI, Scaleway | [GitHub](https://github.com/MoyLiG/P13-mvp-rag-puls-events) |
 | P12 | Projet d'infrastructure (Option B) | Data infra / Qualité | Kestra, PostgreSQL (RLS), Great Expectations, Google Maps, Slack | [GitHub](https://github.com/MoyLiG/P12_projet_infrastructure) |
 | P11 | Système RAG (POC) | NLP / RAG | LangChain, Mistral, FAISS, Streamlit | [GitHub](https://github.com/MoyLiG/P11) |
 | P10 | BottleNeck — ETL automatisé | Orchestration ETL | Kestra, DuckDB, Python | [GitHub](https://github.com/MoyLiG/p10-bottleneck-data-engineer) |
@@ -68,7 +68,7 @@ monitoring de production, gestion de projet data.
 **Valeur ajoutée** — Transforme une preuve de faisabilité en produit déployable,
 avec une trajectoire de coûts maîtrisée et une conformité RGPD by design.
 
-**Code** — _repo à venir_
+**Code** — [github.com/MoyLiG/P13-mvp-rag-puls-events](https://github.com/MoyLiG/P13-mvp-rag-puls-events)
 
 ### P12 — Gérez un projet d'infrastructure (Option B, Sport Data Solution)
 > Pipeline ETL calculant l'impact financier de deux avantages sportifs pour
