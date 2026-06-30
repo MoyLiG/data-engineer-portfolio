@@ -17,7 +17,7 @@ scalables, en passant par le streaming temps réel et l'infrastructure data.
 | P11 | Système RAG (POC) | NLP / RAG | LangChain, Mistral, FAISS, Streamlit | [GitHub](https://github.com/MoyLiG/P11) |
 | P10 | BottleNeck — ETL automatisé | Orchestration ETL | Kestra, DuckDB, Python | [GitHub](https://github.com/MoyLiG/p10-bottleneck-data-engineer) |
 | P9 | InduTechData — pipeline temps réel | Streaming | Redpanda/Kafka, PySpark, MySQL, Docker | [GitHub](https://github.com/MoyLiG/P9-InduTechData) |
-| P8 | Infrastructure de données (Forecast 2.0) | Data infra / ELT | Airbyte, dbt, PostgreSQL, AWS | _repo à venir_ |
+| P8 | Infrastructure de données (Forecast 2.0) | Data infra / ELT | Airbyte, dbt, PostgreSQL, AWS | [GitHub](https://github.com/MoyLiG/P8-forecast-data-infra) |
 | P7 | Base de données NoSQL (NosCités) | NoSQL | MongoDB (replica set + sharding), Tableau | _repo à venir_ |
 | P6 | Prédiction conso. bâtiments (Seattle) | ML deployment | BentoML, scikit-learn, Pydantic, Docker | _repo à venir_ |
 | P5 | Migration données médicales | NoSQL / DevOps | MongoDB, Docker, RBAC, CI/CD GitHub Actions | [GitHub](https://github.com/MoyLiG/OC_P5) |
@@ -220,7 +220,7 @@ modélisation dimensionnelle (star schema), optimisation PostgreSQL
 **Valeur ajoutée** — Une couche de données météo fiable, testée et requêtable,
 prête à alimenter les Data Scientists sans retraitement.
 
-**Code** — _repo à venir_
+**Code** — [github.com/MoyLiG/P8-forecast-data-infra](https://github.com/MoyLiG/P8-forecast-data-infra)
 
 ### P7 — Concevez & analysez une base de données NoSQL (NosCités)
 > Concevoir une base MongoDB distribuée pour des annonces de logement (Airbnb
