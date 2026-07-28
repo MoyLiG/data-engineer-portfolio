@@ -20,11 +20,11 @@ Saint-Nazaire. Le plus simple pour me joindre :
 
 | # | Projet | Domaine | Stack clé | Code |
 |---|--------|---------|-----------|------|
-| P13 | MVP RAG scalable | NLP / RAG / Cloud | pgvector, PostGIS, Redis, smolagents, Langfuse, FastAPI, Scaleway | [GitHub](https://github.com/MoyLiG/P13-mvp-rag-puls-events) |
-| P12 | Projet d'infrastructure (Option B) | Data infra / Qualité | Kestra, PostgreSQL (RLS), Great Expectations, Google Maps, Slack | [GitHub](https://github.com/MoyLiG/P12_projet_infrastructure) |
+| P13 | ★ MVP RAG scalable | NLP / RAG / Cloud | pgvector, PostGIS, Redis, smolagents, Langfuse, FastAPI, Scaleway | [GitHub](https://github.com/MoyLiG/P13-mvp-rag-puls-events) |
+| P12 | ★ Projet d'infrastructure (Option B) | Data infra / Qualité | Kestra, PostgreSQL (RLS), Great Expectations, Google Maps, Slack | [GitHub](https://github.com/MoyLiG/P12_projet_infrastructure) |
 | P11 | Système RAG (POC) | NLP / RAG | LangChain, Mistral, FAISS, Streamlit | [GitHub](https://github.com/MoyLiG/P11) |
 | P10 | BottleNeck — ETL automatisé | Orchestration ETL | Kestra, DuckDB, Python | [GitHub](https://github.com/MoyLiG/p10-bottleneck-data-engineer) |
-| P9 | InduTechData — pipeline temps réel | Streaming | Redpanda/Kafka, PySpark, MySQL, Docker | [GitHub](https://github.com/MoyLiG/P9-InduTechData) |
+| P9 | ★ InduTechData — pipeline temps réel | Streaming | Redpanda/Kafka, PySpark, MySQL, Docker | [GitHub](https://github.com/MoyLiG/P9-InduTechData) |
 | P8 | Infrastructure de données (Forecast 2.0) | Data infra / ELT | Airbyte, dbt, PostgreSQL, AWS | [GitHub](https://github.com/MoyLiG/P8-forecast-data-infra) |
 | P7 | Base de données NoSQL (NosCités) | NoSQL | MongoDB (replica set + sharding), Tableau | [GitHub](https://github.com/MoyLiG/P7-noscites-mongodb) |
 | P6 | Prédiction conso. bâtiments (Seattle) | ML deployment | BentoML, scikit-learn, Pydantic, Docker | [GitHub](https://github.com/MoyLiG/P6-seattle-energy-bentoml) |
@@ -32,6 +32,8 @@ Saint-Nazaire. Le plus simple pour me joindre :
 | P4 | Audit d'un environnement de données | SQL / BI | SQL, Power BI, audit | _projet local_ |
 | P3 | Conception & requêtage SQL | SQL / Modélisation | SQL, modélisation relationnelle (Power Architect) | _projet local_ |
 | — | Fondamentaux | Python / outils | Python, Git, exercices | — |
+
+★ = les trois projets détaillés en premier ci-dessous.
 
 ## Compétences démontrées
 
@@ -45,7 +47,9 @@ Saint-Nazaire. Le plus simple pour me joindre :
 | Qualité / Tests | pytest, Great Expectations, tests dbt, assertions « golden values », monitoring (Langfuse) | P5, P8, P10, P12, P13 |
 | Sécurité / Données sensibles | RBAC, RLS, pseudonymisation (SHA-256 salé), hachage bcrypt, audit trail, RGPD/souveraineté | P5, P12, P13 |
 
-## Fiches projets
+## Trois projets à regarder en priorité
+
+Architecture RAG en production, sécurité de données personnelles et streaming temps réel : les trois compétences les moins courantes chez un profil junior.
 
 ### P13 — MVP RAG scalable (Puls-Events)
 > Faire évoluer le POC RAG P11 en MVP production scalable et souverain.
@@ -109,66 +113,6 @@ audit, reproductibilité) sur un cas RH réaliste, défendable face à un sponso
 
 **Code** — [github.com/MoyLiG/P12_projet_infrastructure](https://github.com/MoyLiG/P12_projet_infrastructure)
 
-### P11 — Système RAG (POC Puls-Events)
-> Démontrer la faisabilité d'un chatbot de recherche sémantique sur les
-> événements culturels d'Open Agenda.
-
-**Le problème** — Permettre à un utilisateur de poser en langage naturel des
-questions du type « Quels concerts à Nantes ce mois-ci ? » sur les données
-événementielles d'Open Agenda.
-
-**Ce que j'ai construit** — Un POC RAG bout-en-bout : ingestion de l'API
-Opendatasoft (pagination + retry), index vectoriel, chaîne de récupération +
-génération, démo CLI et Streamlit. Périmètre Pays de la Loire, événements de
-moins d'un an.
-
-**Stack & outils** — LangChain (`create_retrieval_chain` + retriever MMR),
-Mistral (`mistral-small-latest`, `mistral-embed` 1024 dim), FAISS (`IndexFlatL2`),
-Streamlit. Stack imposée par le brief.
-
-**Résultats** — Chatbot fonctionnel répondant en français sur le catalogue
-Open Agenda (1,1 M+ enregistrements au catalogue source). Pipeline d'évaluation
-du RAG livré. Validé par les équipes produit et marketing.
-
-**Compétences démontrées** — RAG, embeddings, intégration LLM, ingestion d'API,
-évaluation de système de récupération, prototypage rapide.
-
-**Valeur ajoutée** — A débloqué le financement du MVP (P13) en prouvant la
-valeur métier du chatbot.
-
-**Code** — [github.com/MoyLiG/P11](https://github.com/MoyLiG/P11)
-
-### P10 — BottleNeck : ETL automatisé
-> Industrialiser une chaîne d'analyse de données vin (rapprochement ERP / site
-> web, détection de vins premium).
-
-**Le problème** — Automatiser et fiabiliser un traitement manuel : nettoyer 3
-sources Excel, fusionner ERP et catalogue web, calculer le CA et isoler les
-vins « premium » par analyse statistique.
-
-**Ce que j'ai construit** — Un pipeline ETL orchestré et planifié, avec tests
-d'assertion à chaque étape clé (« golden values »), alerte email en cas
-d'échec, et un diagnostic des produits orphelins (présents en ERP, absents du
-web).
-
-**Stack & outils** — Kestra (flow YAML, trigger cron, alerte Gmail SMTP),
-DuckDB (SQL de nettoyage/fusion/CA), Python (calcul de z-score), Excel/CSV en
-sortie, Docker Compose.
-
-**Résultats** — CA total vérifié à 70 568,60 € ; 30 vins premium (z-score > 2)
-et 684 vins ordinaires ; 111 produits orphelins détectés (~40 540 € de stock
-dormant). 5 blocs d'assertions garantissent les valeurs attendues à chaque
-étape.
-
-**Compétences démontrées** — Orchestration ETL, SQL analytique, tests de
-pipeline (assertions, fail-fast), détection d'anomalies statistiques,
-reproductibilité Docker.
-
-**Valeur ajoutée** — Transforme un traitement manuel fragile en pipeline
-testé, planifié et auto-surveillé, avec un diagnostic métier exploitable.
-
-**Code** — [github.com/MoyLiG/p10-bottleneck-data-engineer](https://github.com/MoyLiG/p10-bottleneck-data-engineer)
-
 ### P9 — InduTechData : pipeline de données temps réel
 > Traiter en continu un flux de tickets clients pour produire des insights
 > temps réel.
@@ -199,7 +143,81 @@ orchestration conteneurisée.
 
 **Code** — [github.com/MoyLiG/P9-InduTechData](https://github.com/MoyLiG/P9-InduTechData)
 
-### P8 — Construisez & testez une infrastructure de données (Forecast 2.0)
+## Les autres projets
+
+Huit projets supplémentaires, du POC RAG à la modélisation relationnelle. Dépliez celui qui vous intéresse.
+
+<details>
+<summary><strong>P11 — Système RAG (POC Puls-Events)</strong></summary>
+
+> Démontrer la faisabilité d'un chatbot de recherche sémantique sur les
+> événements culturels d'Open Agenda.
+
+**Le problème** — Permettre à un utilisateur de poser en langage naturel des
+questions du type « Quels concerts à Nantes ce mois-ci ? » sur les données
+événementielles d'Open Agenda.
+
+**Ce que j'ai construit** — Un POC RAG bout-en-bout : ingestion de l'API
+Opendatasoft (pagination + retry), index vectoriel, chaîne de récupération +
+génération, démo CLI et Streamlit. Périmètre Pays de la Loire, événements de
+moins d'un an.
+
+**Stack & outils** — LangChain (`create_retrieval_chain` + retriever MMR),
+Mistral (`mistral-small-latest`, `mistral-embed` 1024 dim), FAISS (`IndexFlatL2`),
+Streamlit. Stack imposée par le brief.
+
+**Résultats** — Chatbot fonctionnel répondant en français sur le catalogue
+Open Agenda (1,1 M+ enregistrements au catalogue source). Pipeline d'évaluation
+du RAG livré. Validé par les équipes produit et marketing.
+
+**Compétences démontrées** — RAG, embeddings, intégration LLM, ingestion d'API,
+évaluation de système de récupération, prototypage rapide.
+
+**Valeur ajoutée** — A débloqué le financement du MVP (P13) en prouvant la
+valeur métier du chatbot.
+
+**Code** — [github.com/MoyLiG/P11](https://github.com/MoyLiG/P11)
+
+</details>
+
+<details>
+<summary><strong>P10 — BottleNeck : ETL automatisé</strong></summary>
+
+> Industrialiser une chaîne d'analyse de données vin (rapprochement ERP / site
+> web, détection de vins premium).
+
+**Le problème** — Automatiser et fiabiliser un traitement manuel : nettoyer 3
+sources Excel, fusionner ERP et catalogue web, calculer le CA et isoler les
+vins « premium » par analyse statistique.
+
+**Ce que j'ai construit** — Un pipeline ETL orchestré et planifié, avec tests
+d'assertion à chaque étape clé (« golden values »), alerte email en cas
+d'échec, et un diagnostic des produits orphelins (présents en ERP, absents du
+web).
+
+**Stack & outils** — Kestra (flow YAML, trigger cron, alerte Gmail SMTP),
+DuckDB (SQL de nettoyage/fusion/CA), Python (calcul de z-score), Excel/CSV en
+sortie, Docker Compose.
+
+**Résultats** — CA total vérifié à 70 568,60 € ; 30 vins premium (z-score > 2)
+et 684 vins ordinaires ; 111 produits orphelins détectés (~40 540 € de stock
+dormant). 5 blocs d'assertions garantissent les valeurs attendues à chaque
+étape.
+
+**Compétences démontrées** — Orchestration ETL, SQL analytique, tests de
+pipeline (assertions, fail-fast), détection d'anomalies statistiques,
+reproductibilité Docker.
+
+**Valeur ajoutée** — Transforme un traitement manuel fragile en pipeline
+testé, planifié et auto-surveillé, avec un diagnostic métier exploitable.
+
+**Code** — [github.com/MoyLiG/p10-bottleneck-data-engineer](https://github.com/MoyLiG/p10-bottleneck-data-engineer)
+
+</details>
+
+<details>
+<summary><strong>P8 — Construisez & testez une infrastructure de données (Forecast 2.0)</strong></summary>
+
 > Enrichir les modèles de prévision électrique de GreenAndCoop avec des données
 > météo de 6 stations.
 
@@ -230,7 +248,11 @@ prête à alimenter les Data Scientists sans retraitement.
 
 **Code** — [github.com/MoyLiG/P8-forecast-data-infra](https://github.com/MoyLiG/P8-forecast-data-infra)
 
-### P7 — Concevez & analysez une base de données NoSQL (NosCités)
+</details>
+
+<details>
+<summary><strong>P7 — Concevez & analysez une base de données NoSQL (NosCités)</strong></summary>
+
 > Concevoir une base MongoDB distribuée pour des annonces de logement (Airbnb
 > Paris + Lyon) et justifier le choix NoSQL.
 
@@ -261,7 +283,11 @@ migration de schéma, avec un raisonnement d'architecture défendable.
 
 **Code** — [github.com/MoyLiG/P7-noscites-mongodb](https://github.com/MoyLiG/P7-noscites-mongodb)
 
-### P6 — Anticipez les besoins en consommation des bâtiments (Seattle)
+</details>
+
+<details>
+<summary><strong>P6 — Anticipez les besoins en consommation des bâtiments (Seattle)</strong></summary>
+
 > Déployer un modèle de prédiction de consommation énergétique des bâtiments
 > comme une API.
 
@@ -289,7 +315,11 @@ et validé, étape indispensable de la mise en production ML.
 
 **Code** — [github.com/MoyLiG/P6-seattle-energy-bentoml](https://github.com/MoyLiG/P6-seattle-energy-bentoml)
 
-### P5 — Migration de données médicales vers MongoDB
+</details>
+
+<details>
+<summary><strong>P5 — Migration de données médicales vers MongoDB</strong></summary>
+
 > Migrer 55 500 dossiers médicaux d'un CSV vers MongoDB, de façon sécurisée et
 > reproductible.
 
@@ -318,7 +348,11 @@ exigences de sécurité d'un domaine sensible (santé).
 
 **Code** — [github.com/MoyLiG/OC_P5](https://github.com/MoyLiG/OC_P5)
 
-### P4 — Audit d'un environnement de données
+</details>
+
+<details>
+<summary><strong>P4 — Audit d'un environnement de données</strong></summary>
+
 > Auditer un environnement de données (logs, base relationnelle) et restituer
 > les constats en BI.
 
@@ -345,7 +379,11 @@ visuels, base d'une prise de décision.
 
 **Code** — _projet local (livrables OpenClassrooms)_
 
-### P3 — Conception & requêtage d'une base de données SQL
+</details>
+
+<details>
+<summary><strong>P3 — Conception & requêtage d'une base de données SQL</strong></summary>
+
 > Modéliser une base relationnelle de transactions immobilières et l'interroger.
 
 **Le problème** — Concevoir un schéma relationnel propre (régions, communes,
@@ -370,6 +408,8 @@ région, répartition par nombre de pièces avec pourcentages).
 données, socle réutilisé dans tous les projets SQL ultérieurs.
 
 **Code** — _projet local (livrables OpenClassrooms)_
+
+</details>
 
 ## Fondamentaux
 
