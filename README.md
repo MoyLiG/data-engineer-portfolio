@@ -130,13 +130,6 @@ audit, reproductibilité) sur un cas RH réaliste, défendable face à un sponso
 > Traiter en continu un flux de tickets clients pour produire des insights
 > temps réel.
 
-![Architecture hybride proposée : datacenter on-premise étendu au cloud AWS](assets/p9-architecture-hybride.png)
-
-*Livrable de conception : l'architecture cible proposée pour moderniser le SI
-on-premise (extension AWS, VPN site-to-site, ingestion Redpanda). Le pipeline
-effectivement implémenté et décrit ci-dessous correspond au bloc ingestion +
-traitement temps réel, monté en local sous Docker Compose.*
-
 **Le problème** — Ingérer un flux continu de tickets (générés toutes les 2 s),
 les enrichir et les agréger en quasi temps réel pour le support client.
 
