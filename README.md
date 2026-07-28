@@ -35,7 +35,7 @@ scalables, en passant par le streaming temps réel et l'infrastructure data.
 | DevOps / Cloud | Docker / Compose, CI/CD (GitHub Actions), déploiement cloud (AWS, Scaleway), API (FastAPI, BentoML) | P5, P6, P8, P12, P13 |
 | ML / NLP | RAG, embeddings, LLM (Mistral), recherche sémantique, agents (smolagents), ML supervisé | P6, P11, P13 |
 | Qualité / Tests | pytest, Great Expectations, tests dbt, assertions « golden values », monitoring (Langfuse) | P5, P8, P10, P12, P13 |
-| Sécurité / Données sensibles | RBAC, RLS, chiffrement at-rest, audit trail, RGPD/souveraineté | P5, P12, P13 |
+| Sécurité / Données sensibles | RBAC, RLS, pseudonymisation (SHA-256 salé), hachage bcrypt, audit trail, RGPD/souveraineté | P5, P12, P13 |
 
 ## Fiches projets
 
@@ -85,7 +85,7 @@ restitution PowerBI. Schémas PostgreSQL séparés `raw`/`staging`/`marts` +
 `audit` + `cache` (pattern inspiré dbt).
 
 **Stack & outils** — Kestra (flow YAML versionné, replay), PostgreSQL (rôles,
-Row Level Security, chiffrement at-rest, audit log), Great Expectations,
+Row Level Security, audit log), Great Expectations,
 Google Maps Distance Matrix API, Slack webhook, PowerBI, Docker, Faker.
 
 **Résultats** — Pipeline reproductible (tout en conteneurs), qualité de données
@@ -93,8 +93,8 @@ validée par suites Great Expectations déclaratives, démo live fonctionnelle a
 services externes réels. Décisions techniques tracées dans un journal de bord.
 
 **Compétences démontrées** — Orchestration Kestra, sécurité de données sensibles
-(RLS, audit), qualité de données, intégration d'API externes, gestion de projet
-et arbitrage technique argumenté.
+(RLS, pseudonymisation des PII, audit), qualité de données, intégration d'API
+externes, gestion de projet et arbitrage technique argumenté.
 
 **Valeur ajoutée** — Une infra data conforme aux standards entreprise (sécurité,
 audit, reproductibilité) sur un cas RH réaliste, défendable face à un sponsor.
