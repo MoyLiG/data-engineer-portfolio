@@ -54,6 +54,12 @@ Architecture RAG en production, sécurité de données personnelles et streaming
 ### P13 — MVP RAG scalable (Puls-Events)
 > Faire évoluer le POC RAG P11 en MVP production scalable et souverain.
 
+![Architecture du MVP RAG Puls-Events](assets/p13-architecture-mvp.png)
+
+*Architecture cible du MVP : ingestion Kestra, stockage PostgreSQL
+(pgvector + PostGIS) et Redis, agents smolagents derrière une API FastAPI,
+observabilité Langfuse — le tout sur Scaleway (cloud souverain UE).*
+
 **Le problème** — Le POC P11 était stateless, mono-instance (FAISS local),
 sans contexte géographique ni recherche temps réel ni monitoring. Puls-Events
 veut un MVP qui tienne la charge et personnalise les réponses.
@@ -86,6 +92,13 @@ avec une trajectoire de coûts maîtrisée et une conformité RGPD by design.
 > Pipeline ETL calculant l'impact financier de deux avantages sportifs pour
 > les 162 salariés d'une entreprise (fictive).
 
+![Cycle de vie d'une donnée RH à travers les couches raw, staging et marts](assets/p12-cycle-donnee-rh.png)
+
+*La même donnée, trois niveaux d'exposition : en clair dans `raw` (accès
+pipeline uniquement), hachée et cloisonnée par Row Level Security dans
+`staging`, réduite à un hash et une tranche de salaire dans les `marts` que lit
+PowerBI.*
+
 **Le problème** — Sport Data Solution veut tester la faisabilité d'une prime
 sportive + jours bien-être. Données RH sensibles, besoin de traçabilité, de
 qualité et d'une démo crédible face à un sponsor business.
@@ -116,6 +129,13 @@ audit, reproductibilité) sur un cas RH réaliste, défendable face à un sponso
 ### P9 — InduTechData : pipeline de données temps réel
 > Traiter en continu un flux de tickets clients pour produire des insights
 > temps réel.
+
+![Architecture hybride proposée : datacenter on-premise étendu au cloud AWS](assets/p9-architecture-hybride.png)
+
+*Livrable de conception : l'architecture cible proposée pour moderniser le SI
+on-premise (extension AWS, VPN site-to-site, ingestion Redpanda). Le pipeline
+effectivement implémenté et décrit ci-dessous correspond au bloc ingestion +
+traitement temps réel, monté en local sous Docker Compose.*
 
 **Le problème** — Ingérer un flux continu de tickets (générés toutes les 2 s),
 les enrichir et les agréger en quasi temps réel pour le support client.
