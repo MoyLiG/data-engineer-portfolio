@@ -1,12 +1,20 @@
 # Portfolio — Data Engineer
 
-> Morgan Le Gall — parcours Data Engineer (OpenClassrooms, 2025/2026).
-> Profil GitHub : https://github.com/MoyLiG
+> **Morgan Le Gall** — Data Engineer · Nantes / Saint-Nazaire
+> [LinkedIn](https://www.linkedin.com/in/morgan-le-gall-74b516364/) · [GitHub](https://github.com/MoyLiG)
 
-Data Engineer en formation, je conçois des pipelines de données reproductibles
-(Docker, orchestration) et des systèmes NLP/RAG en production. Ce portfolio
-récapitule 11 projets du parcours : de la modélisation SQL aux systèmes RAG
-scalables, en passant par le streaming temps réel et l'infrastructure data.
+Je conçois des pipelines de données reproductibles (Docker, orchestration) et
+des systèmes NLP/RAG en production : de la modélisation SQL aux architectures
+RAG scalables, en passant par le streaming temps réel et l'infrastructure data.
+
+Ce portfolio rassemble les **13 projets du parcours Data Engineer
+OpenClassrooms** (titre RNCP niveau 7 / bac+5), tous soutenus et validés :
+11 projets d'ingénierie détaillés ci-dessous, précédés de deux modules de
+fondamentaux (découverte du métier, Python).
+
+**Je recherche un poste de Data Engineer** sur la région Nantes /
+Saint-Nazaire. Le plus simple pour me joindre :
+[LinkedIn](https://www.linkedin.com/in/morgan-le-gall-74b516364/).
 
 ## Récapitulatif des projets
 
