@@ -1,7 +1,7 @@
 # Portfolio — Data Engineer
 
 > **Morgan Le Gall** — Data Engineer · Nantes / Saint-Nazaire
-> [LinkedIn](https://www.linkedin.com/in/morgan-le-gall-74b516364/) · [GitHub](https://github.com/MoyLiG)
+> [LinkedIn](https://www.linkedin.com/in/morgan-le-gall-mlg/) · [GitHub](https://github.com/MoyLiG)
 
 Je conçois des pipelines de données reproductibles (Docker, orchestration) et
 des systèmes NLP/RAG en production : de la modélisation SQL aux architectures
@@ -14,7 +14,7 @@ fondamentaux (découverte du métier, Python).
 
 **Je recherche un poste de Data Engineer** sur la région Nantes /
 Saint-Nazaire. Le plus simple pour me joindre :
-[LinkedIn](https://www.linkedin.com/in/morgan-le-gall-74b516364/).
+[LinkedIn](https://www.linkedin.com/in/morgan-le-gall-mlg/).
 
 ## Récapitulatif des projets
 
